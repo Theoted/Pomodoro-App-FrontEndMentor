@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
+
+    <title>Frontend Mentor | Pomodoro app</title>
+  </head>
+  <body>
+    <div class="allContainer">
+      <h1>pomodoro</h1>
+      <div class="btnContainer">
+        <button class="pomoBtn mainBtn">pomodoro</button>
+        <button class="shortBtn mainBtn">short break</button>
+        <button class="longBtn mainBtn">long break</button>
+      </div>
+
+      <div class="circular">
+        <div class="secondCircular">
+          <svg>
+            <circle cx="158" cy="158" r="143">
+              <div class="circle">
+                <div class="pomoTimer timers">
+                  <div class="time">00:00</div>
+                  <div class="pauseRestart"><p>PAUSE</p></div>
+                </div>
+                <div class="shortTimer timers">
+                  <div class="time">00:00</div>
+                  <div class="pauseRestart"><p>PAUSE</p></div>
+                </div>
+                <div class="longTimer timers">
+                  <div class="time">00:00</div>
+                  <div class="pauseRestart"><p>PAUSE</p></div>
+                </div>
+              </div>
+            </circle>
+          </svg>
+        </div>
+      </div>
+
+      <i class="fas fa-cog"></i>
+
+      <div class="menuContainer">
+        <div class="menu">
+          <div class="topMenu">
+            <h2>Settings</h2>
+            <i class="fas fa-times"></i>
+          </div>
+          <hr />
+          <div class="timesSelector">
+            <h2>TIME (MINUTES)</h2>
+            <div class="inputs">
+              <div class="pomodoroInput">
+                <p>pomodoro</p>
+                <input
+                  type="number"
+                  placeholder="25"
+                  id="pomodoroInput"
+                  min="1"
+                  max="10"
+                  maxlength="3"
+                  autocomplete="off"
+                />
+                <div class="chevrons chevrons1">
+                  <i class="fas fa-chevron-up"></i>
+                  <i class="fas fa-chevron-down"></i>
+                </div>
+              </div>
+              <div class="shortBreakInput">
+                <p>short break</p>
+                <input
+                  type="number"
+                  placeholder="5"
+                  id="shortBreakInput"
+                  maxlength="3"
+                  autocomplete="off"
+                />
+                <div class="chevrons chevrons2">
+                  <i class="fas fa-chevron-up"></i>
+                  <i class="fas fa-chevron-down"></i>
+                </div>
+              </div>
+              <div class="longBreakInput">
+                <p>long break</p>
+                <label for="longBreakInput"></label>
+                <input
+                  type="number"
+                  placeholder="15"
+                  id="longBreakInput"
+                  maxlength="3"
+                  autocomplete="off"
+                />
+                <div class="chevrons chevrons3">
+                  <i class="fas fa-chevron-up"></i>
+                  <i class="fas fa-chevron-down"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr class="menuHr"/>
+          <div class="fontSelector">
+            <h2>FONT</h2>
+            <div class="fontButtonsContainer">
+              <button class="fontButtons">Aa</button>
+              <button class="fontButtons">Aa</button>
+              <button class="fontButtons">Aa</button>
+            </div>
+          </div>
+          <hr class="menuHr"/>
+          <div class="colorSelector">
+            <h3>COLOR</h3>
+            <div class="colorButtonsContainer">
+              <button class="colorButtons"><i class="buttonFas fas"></i></button>
+              <button class="colorButtons"><i class="buttonFas fas"></i></button>
+              <button class="colorButtons"><i class="buttonFas fas"></i></button>
+            </div>
+          </div>
+        </div>
+        <button class="applyMenuBtn">Apply</button>
+      </div>
+    </div>
+
+    <script src="/public/app.js"></script>
+  </body>
+</html>
