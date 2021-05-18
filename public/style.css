@@ -62,7 +62,7 @@ h1 {
   color: #161932 !important;
 }
 .mainBtnStylePurple {
-  background-color: #D881F8 !important;
+  background-color: #d881f8 !important;
   color: #161932 !important;
 }
 
@@ -224,7 +224,7 @@ hr {
 }
 
 .menuMoveResponsive {
-  top: 2rem!important;
+  top: 2rem !important;
 }
 
 .menu {
@@ -386,26 +386,26 @@ input::-webkit-inner-spin-button {
   background-color: #fc8a8a;
 }
 
-.fontSelector  {
+.fontSelector {
   height: 6rem;
 }
 
-.fontSelector .fontButtonsContainer button{
+.fontSelector .fontButtonsContainer button {
   border: transparent;
   border-radius: 100%;
   height: 2.5rem;
   width: 2.5rem;
   font-weight: 600;
-  margin: 0 .5rem 0 .5rem;
-  transition: all .5s ease;
+  margin: 0 0.5rem 0 0.5rem;
+  transition: all 0.5s ease;
   cursor: pointer;
 }
 
 .fontSelector .fontButtonsContainer button:nth-child(2) {
-  font-family: 'Roboto Slab', serif;
+  font-family: "Roboto Slab", serif;
 }
 .fontSelector .fontButtonsContainer button:nth-child(3) {
-  font-family: 'Space Mono', monospace;
+  font-family: "Space Mono", monospace;
 }
 
 .fontSelector .fontButtonsContainer button:hover {
@@ -422,16 +422,14 @@ input::-webkit-inner-spin-button {
   height: 6rem;
 }
 
-
-
-.colorSelector .colorButtonsContainer button{
+.colorSelector .colorButtonsContainer button {
   border: transparent;
   border-radius: 100%;
   height: 2.5rem;
   width: 2.5rem;
   font-weight: 600;
-  margin: 0 .5rem 0 .5rem;
-  transition: all .5s ease;
+  margin: 0 0.5rem 0 0.5rem;
+  transition: all 0.5s ease;
   cursor: pointer;
 }
 
@@ -445,11 +443,102 @@ input::-webkit-inner-spin-button {
 }
 
 .colorButtonsContainer button:first-child {
-  background-color: #F87070;
+  background-color: #f87070;
 }
 .colorButtonsContainer button:nth-child(2) {
-  background-color: #70F3F8;
+  background-color: #70f3f8;
 }
 .colorButtonsContainer button:nth-child(3) {
-  background-color: #D881F8;
+  background-color: #d881f8;
+}
+
+@media only screen and (max-width: 575px) {
+  .btnContainer {
+    width: 19rem;
+  }
+
+  .circular {
+    width: 17rem;
+    height: 17rem;
+  }
+
+  .timers .time {
+    font-size: 4rem;
+  }
+  .pauseRestart {
+    font-size: 0.9rem;
+    letter-spacing: 0.7rem;
+    margin-right: -0.7rem;
+  }
+
+  .pauseRestart:hover {
+    transform: scale(1);
+  }
+
+  /* MENU RESPONSIVE */
+  .menuContainer {
+    width: 19rem;
+  }
+
+  .menuContainer .menu {
+    width: 19rem;
+    height: 38rem;
+  }
+
+  .menuContainer .menu .timesSelector {
+    height: 15.5rem;
+  }
+
+  .timesSelector .inputs {
+    flex-direction: column;
+  }
+  .timesSelector .inputs input {
+    margin: 0.2rem 0;
+  }
+  .pomodoroInput,
+  .shortBreakInput,
+  .longBreakInput {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .chevrons {
+    left: 93%;
+  }
+
+  .chevrons1 {
+    top: 15.5% !important;
+  }
+  .chevrons2 {
+    top: 50.5% !important;
+  }
+  .chevrons3 {
+    top: 83.5% !important;
+  }
+
+  .fontSelector {
+    flex-direction: column;
+    height: 8rem;
+    padding: 2rem;
+  }
+
+  .fontSelector h2 {
+    margin-bottom: 1rem;
+  }
+
+  .colorSelector {
+    flex-direction: column;
+    height: 8rem;
+    padding: 1.5rem;
+  }
+
+  .colorSelector h3 {
+    margin-bottom: 1.5rem;
+  }
+
+  .applyMenuBtn {
+    top: 36.5rem;
+    right: 6rem;
+  }
 }
