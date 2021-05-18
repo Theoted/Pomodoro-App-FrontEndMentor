@@ -223,6 +223,10 @@ hr {
   top: 10rem !important;
 }
 
+.menuMoveResponsive {
+  top: 2rem!important;
+}
+
 .menu {
   position: relative;
   background-color: white;

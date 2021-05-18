@@ -40,12 +40,20 @@ fontButtons[0].classList.add("fontSelectorBg");
 
 // Style
 settingBtn.addEventListener("click", () => {
-  menuContainer.classList.toggle("menuMove");
+  if (window.innerWidth <= 575) {
+    menuContainer.classList.toggle("menuMoveResponsive");
+  } else {
+    menuContainer.classList.toggle("menuMove");
+  }
   settingBtn.classList.toggle("cogAnimation");
 });
 
 leaveMenuBtn.addEventListener("click", () => {
-  menuContainer.classList.remove("menuMove");
+  if (window.innerWidth <= 575) {
+    menuContainer.classList.remove("menuMoveResponsive");
+  } else {
+    menuContainer.classList.remove("menuMove");
+  }
 });
 
 // Style for font selector button on click
@@ -116,15 +124,18 @@ mainButtons[2].addEventListener("click", pauseTimer);
 
 // Lunch timer when applyMenuBtn is clicked
 applyMenuBtn.addEventListener("click", () => {
-  menuContainer.classList.remove("menuMove");
+  if (window.innerWidth <= 575) {
+    menuContainer.classList.remove("menuMoveResponsive");
+  } else {
+    menuContainer.classList.remove("menuMove");
+  }
   pauseRestartBtn[0].innerHTML = "PAUSE";
-  circle.style.strokeDashoffset = 900;
+  //circle.style.strokeDashoffset = 900;
   mainTimerFinished = 0;
   timersLunched = 1;
   start();
 
   // change style
-
   // Change first main buttons color
   if (colorButtonsFas[0].classList.contains("fa-check")) {
     mainButtons[0].classList.remove("mainBtnStyleBlue");
