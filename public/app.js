@@ -18,6 +18,7 @@ const mainButtons = document.querySelectorAll(".mainBtn");
 const btnContainer = document.querySelector(".btnContainer");
 const pauseRestartBtn = document.querySelectorAll("div.pauseRestart");
 const timers = document.querySelectorAll(".timers");
+const pauseBtn = document.querySelectorAll(".pauseBtn");
 
 //Menu selectors
 const applyMenuBtn = document.querySelector(".applyMenuBtn");
@@ -35,6 +36,11 @@ const colorButtonsFas = document.querySelectorAll(".buttonFas");
 colorButtonsFas[0].classList.add("fa-check");
 mainButtons[0].classList.add("mainBtnStyle");
 fontButtons[0].classList.add("fontSelectorBg");
+disable(mainButtons[1]);
+disable(mainButtons[2]);
+disable(pauseBtn[0]);
+disable(pauseBtn[1]);
+disable(pauseBtn[2]);
 
 //Event listener
 
@@ -46,6 +52,7 @@ settingBtn.addEventListener("click", () => {
     menuContainer.classList.toggle("menuMove");
   }
   settingBtn.classList.toggle("cogAnimation");
+  allEnable();
 });
 
 leaveMenuBtn.addEventListener("click", () => {
@@ -133,6 +140,9 @@ applyMenuBtn.addEventListener("click", () => {
   //circle.style.strokeDashoffset = 900;
   mainTimerFinished = 0;
   timersLunched = 1;
+  enable(mainButtons[1]);
+  enable(mainButtons[2]);
+  enable(pauseBtn[0]);
   start();
 
   // change style
@@ -388,6 +398,7 @@ function tick() {
     mainTimerFinished = 1;
     pauseTimer();
     allEnable();
+    disable(pauseBtn[0]);
   } else {
     return;
   }
@@ -446,6 +457,7 @@ function tickShortTimer() {
       getMinutes(totalSecondsShort) + ":" + getSeconds(totalSecondsShort); // Updates display
     allDisable();
     disableMainButtons();
+    disable(pauseBtn[0]);
   } else if (totalSecondsShort == 1) {
     // The short pause timer has reached zero, main timer resumes
     totalSecondsShort--;
@@ -454,6 +466,7 @@ function tickShortTimer() {
     clearInterval(timerShort);
     runTimer();
     enableMainButtons();
+    enable(pauseBtn[0]);
     timers[0].style.display = "flex";
     timers[1].style.display = "none";
     timers[2].style.display = "none";
@@ -497,6 +510,7 @@ function tickLongTimer() {
       getMinutes(totalSecondsLong) + ":" + getSeconds(totalSecondsLong); // Updates display
     allDisable();
     disableMainButtons();
+    disable(pauseBtn[0]);
   } else if (totalSecondsLong == 1) {
     // The long pause timer has reached zero, main timer resumes
     totalSecondsLong--;
@@ -504,6 +518,7 @@ function tickLongTimer() {
       getMinutes(totalSecondsLong) + ":" + getSeconds(totalSecondsLong);
     clearInterval(timerLong);
     enableMainButtons();
+    enable(pauseBtn[0]);
     runTimer();
     timers[0].style.display = "flex";
     timers[1].style.display = "none";

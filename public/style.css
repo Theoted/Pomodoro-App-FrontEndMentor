@@ -178,6 +178,17 @@ svg circle {
   height: 2rem;
 }
 
+.pauseRestart button {
+  background: none;
+  border: none;
+  color: #d7e0ff; 
+  font-size: 1.1rem;
+  letter-spacing: 1rem;
+  transition: all 0.5s ease;
+  cursor: pointer;
+  height: 2rem;
+}
+
 .time,
 .pauseRestart {
   color: #d7e0ff;
@@ -465,10 +476,9 @@ input::-webkit-inner-spin-button {
   .timers .time {
     font-size: 4rem;
   }
-  .pauseRestart {
+  .pauseRestart button {
     font-size: 0.9rem;
     letter-spacing: 0.7rem;
-    margin-right: -0.7rem;
   }
 
   .pauseRestart:hover {
