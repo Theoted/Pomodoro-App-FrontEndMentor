@@ -464,8 +464,19 @@ input::-webkit-inner-spin-button {
 }
 
 @media only screen and (max-width: 575px) {
+  .allContainer {
+    margin-top: -2rem;
+  }
+
+  h1 {
+    padding: 0;
+    margin-top: -1.5rem;
+    margin-bottom: -2rem;
+  }
+
   .btnContainer {
     width: 19rem;
+    margin-bottom: -1rem;
   }
 
   .circular {
@@ -483,6 +494,11 @@ input::-webkit-inner-spin-button {
 
   .pauseRestart:hover {
     transform: scale(1);
+  }
+
+  .fa-cog {
+    padding: 0;
+    margin-top: -2rem;
   }
 
   /* MENU RESPONSIVE */
