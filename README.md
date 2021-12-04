@@ -65,4 +65,3 @@ The thing I need to work on is the writing and cleanliness of my code whether it
 
 - Website - [No website yet !](https://www.no-site-yet.no)
 - Frontend Mentor - [@Theoted](https://www.frontendmentor.io/profile/Theoted)
-- Twitter - [@nasty697](https://twitter.com/nasty_697)
